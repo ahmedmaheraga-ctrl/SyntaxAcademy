@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyntaxAcademy - لوحة تحكم الطالب</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: '#131b2e',
+                        cardHover: '#1c2844',
+                        neonPurple: '#8b5cf6',
+                        neonEmerald: '#10b981',
+                        borderSubtle: '#22304f'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-darkBg text-gray-100 font-sans antialiased min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-borderSubtle bg-darkBg/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neonPurple to-indigo-500 flex items-center justify-center shadow-lg shadow-neonPurple/30">
+                    <i class="fa-solid fa-code text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-wide text-white">Syntax<span class="text-neonPurple">Academy</span></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium text-gray-400">
+                <a href="#" class="text-white hover:text-neonPurple transition">الرئيسية</a>
+                <a href="#" class="hover:text-white transition">المسارات</a>
+                <a href="#" class="hover:text-white transition">التحقق</a>
+                <a href="#" class="hover:text-white transition">بوابة الطلاب</a>
+                <a href="#" class="hover:text-white transition">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+
+        <!-- Top Section: Welcome Banner & Certificate Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- Welcome Banner (2 cols) -->
+            <div class="lg:col-span-2 bg-cardBg border border-borderSubtle rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between shadow-xl">
+                <div class="absolute top-0 left-0 w-96 h-96 bg-neonPurple/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div>
+                    <div class="inline-flex items-center space-x-2 space-x-reverse bg-neonEmerald/10 text-neonEmerald px-3 py-1 rounded-full text-xs font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-neonEmerald animate-pulse"></span>
+                        <span>طالب نشط</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-3">أهلاً بك، مبرمج المستقبل</h1>
+                    <p class="text-gray-400 text-sm max-w-xl">الذكاء الاصطناعي وعلم البيانات (AI & Data Science)</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-borderSubtle">
+                    <div>
+                        <span class="block text-xs text-gray-500 mb-1">البريد الإلكتروني</span>
+                        <span class="text-sm font-medium text-gray-200 truncate block">student@syntax.com</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-gray-500 mb-1">المشرف</span>
+                        <span class="text-sm font-medium text-gray-200">د. أحمد خالد</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-gray-500 mb-1">تاريخ البدء</span>
+                        <span class="text-sm font-medium text-gray-200">3 أغسطس 2026</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-gray-500 mb-1">تاريخ الانتهاء</span>
+                        <span class="text-sm font-medium text-gray-200">3 سبتمبر 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate Card (1 col) -->
+            <div class="bg-cardBg border border-borderSubtle rounded-3xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-neonPurple/10 rounded-full blur-2xl"></div>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-neonPurple/10 text-neonPurple flex items-center justify-center">
+                        <i class="fa-solid fa-award text-xl"></i>
+                    </div>
+                    <span class="text-xs text-gray-400 bg-darkBg px-3 py-1 rounded-full border border-borderSubtle">ID: SYN-98421</span>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-1">شهادة الإتمام</h2>
+                    <p class="text-xs text-gray-400 mb-6">متاحة للتحميل والاستعراض الفوري</p>
+                </div>
+                <button class="w-full bg-white hover:bg-gray-100 text-darkBg font-semibold py-3 px-4 rounded-xl transition duration-200 shadow-lg flex items-center justify-center space-x-2 space-x-reverse">
+                    <i class="fa-solid fa-eye ml-2"></i>
+                    <span>عرض الشهادة</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Middle Section: Trackers & Support -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Progress Tracker -->
+            <div class="bg-cardBg border border-borderSubtle rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">مؤشر التقدم</h3>
+                    </div>
+                    <p class="text-2xl font-black text-white mb-2">100% <span class="text-xs font-normal text-neonEmerald">مكتمل</span></p>
+                    <div class="w-full bg-darkBg h-2.5 rounded-full overflow-hidden mb-4 border border-borderSubtle">
+                        <div class="bg-gradient-to-r from-neonPurple to-neonEmerald h-full w-full rounded-full"></div>
+                    </div>
+                </div>
+                <span class="text-xs text-gray-500">المرحلة القادمة: مشروع التخرج النهائي</span>
+            </div>
+
+            <!-- Offer Letter -->
+            <div class="bg-cardBg border border-borderSubtle rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-neonPurple flex items-center justify-center">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">خطاب القبول</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6">تم اعتماد خطاب القبول الخاص بك بنجاح في البرنامج التدريبي.</p>
+                </div>
+                <button class="w-full bg-darkBg hover:bg-cardHover border border-borderSubtle text-gray-200 font-medium py-2.5 px-4 rounded-xl transition duration-200 text-sm flex items-center justify-center space-x-2 space-x-reverse">
+                    <i class="fa-solid fa-download ml-2"></i>
+                    <span>تحميل بصيغة PDF</span>
+                </button>
+            </div>
+
+            <!-- Support & Comms -->
+            <div class="bg-cardBg border border-borderSubtle rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">الدعم والتواصل</h3>
+                    </div>
+                    <p class="text-xs text-gray-400 mb-4">فريق الدعم المباشر متواجد لمساعدتك طوال أيام الأسبوع.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="bg-darkBg hover:bg-cardHover border border-borderSubtle text-gray-300 py-2 rounded-xl text-xs font-medium transition">البريد الإلكتروني</button>
+                    <button class="bg-darkBg hover:bg-cardHover border border-borderSubtle text-gray-300 py-2 rounded-xl text-xs font-medium transition">راسلنا واتساب</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Section: Project Tracker Table -->
+        <div class="bg-cardBg border border-borderSubtle rounded-3xl p-6 shadow-xl">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-10 h-10 rounded-xl bg-neonEmerald/10 text-neonEmerald flex items-center justify-center">
+                        <i class="fa-solid fa-code-commit"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">متابعة المشاريع (Project Tracker)</h3>
+                </div>
+                <span class="text-xs bg-darkBg text-neonEmerald border border-neonEmerald/30 px-3 py-1 rounded-full font-medium">تحديثات حية</span>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-right border-collapse">
+                    <thead>
+                        <tr class="border-b border-borderSubtle text-xs text-gray-400">
+                            <th class="py-3 px-4 font-semibold">اسم المشروع</th>
+                            <th class="py-3 px-4 font-semibold">الموعد النهائي</th>
+                            <th class="py-3 px-4 font-semibold text-left">الرابط</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-borderSubtle/50 text-sm">
+                        <tr>
+                            <td class="py-4 px-4 font-medium text-white">مجموعة بيانات الدورة (Course Dataset)</td>
+                            <td class="py-4 px-4 text-gray-400">مطلوب</td>
+                            <td class="py-4 px-4 text-left"><a href="#" class="text-neonPurple hover:underline font-medium">تحميل البيانات</a></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-medium text-white">المشروع الأول: روبوت المحادثة (Rule-Based Chatbot)</td>
+                            <td class="py-4 px-4 text-gray-400">10 أغسطس 2026</td>
+                            <td class="py-4 px-4 text-left"><a href="#" class="text-neonPurple hover:underline font-medium">فتح المشروع</a></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-medium text-white">المشروع الثاني: تصنيف البيانات (KNN Classifier)</td>
+                            <td class="py-4 px-4 text-gray-400">17 أغسطس 2026</td>
+                            <td class="py-4 px-4 text-left"><a href="#" class="text-neonPurple hover:underline font-medium">فتح المشروع</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-borderSubtle mt-16 py-6 text-center text-xs text-gray-500">
+        جميع الحقوق محفوظة © 2026 SyntaxAcademy
+    </footer>
+
+</body>
+</html>
